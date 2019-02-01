@@ -70,7 +70,11 @@ public class TwoLevelCacheClass<KeyType,ValueType extends Serializable> implemen
 
     @Override
     public void cache(KeyType keyType, ValueType valueType) throws IOException, ClassNotFoundException {
-        ramCache.cache(keyType,valueType);
+        if(!(ramCache.size() >= maxRamCacheCapacity)) {
+            ramCache.cache(keyType, valueType);
+        } else {
+            recache();
+        }
     }
 
     @Override
