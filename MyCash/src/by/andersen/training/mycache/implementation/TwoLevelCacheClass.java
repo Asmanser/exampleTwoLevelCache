@@ -9,16 +9,16 @@ import java.util.TreeSet;
 
 public class TwoLevelCacheClass<KeyType,ValueType extends Serializable> implements ILeveledCache<KeyType,ValueType> {
 
-    RamCacheClass<KeyType,ValueType> ramCache;
-    MemoryCacheClass<KeyType,ValueType> memoryCache;
-    int maxRamCacheCapacity;
-    int numberOfRequests;
-    int numberOfRequestsForRecahce;
+    private RamCacheClass<KeyType,ValueType> ramCache;
+    private MemoryCacheClass<KeyType,ValueType> memoryCache;
+    private int maxRamCacheCapacity;
+    private int numberOfRequests;
+    private int numberOfRequestsForRecahce;
 
-    public TwoLevelCacheClass(int _maxRamCacheCapacity, int _numberOfRequestsForRecache)
+    public TwoLevelCacheClass(int maxRamCacheCapacity, int numberOfRequestsForRecache)
     {
-        maxRamCacheCapacity = _maxRamCacheCapacity;
-        numberOfRequestsForRecahce = _numberOfRequestsForRecache;
+        this.maxRamCacheCapacity = maxRamCacheCapacity;
+        this.numberOfRequestsForRecahce = numberOfRequestsForRecache;
         ramCache = new RamCacheClass<KeyType, ValueType>();
         memoryCache = new MemoryCacheClass<KeyType, ValueType>();
         numberOfRequests = 0;
