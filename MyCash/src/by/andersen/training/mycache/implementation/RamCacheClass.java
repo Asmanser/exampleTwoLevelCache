@@ -1,12 +1,13 @@
 package by.andersen.training.mycache.implementation;
 
-import by.andersen.training.mycache.comparators.RamCacheComparator;
+import by.andersen.training.mycache.comparators.CacheComparator;
 import by.andersen.training.mycache.interfaces.ICache;
 import by.andersen.training.mycache.interfaces.IFrecquencyCallObject;
-import sun.reflect.generics.tree.Tree;
 
 import java.io.IOException;
-import java.util.*;
+import java.util.HashMap;
+import java.util.TreeMap;
+import java.util.Set;
 
 public class RamCacheClass <KeyType, ValueType> implements ICache<KeyType,ValueType>, IFrecquencyCallObject<KeyType> {
 
@@ -69,7 +70,7 @@ public class RamCacheClass <KeyType, ValueType> implements ICache<KeyType,ValueT
 
     @Override
     public Set<KeyType> getMostFrequentlyUsedKeys() {
-        RamCacheComparator ramCacheComparator = new RamCacheComparator(frequencyMap);
+        CacheComparator ramCacheComparator = new CacheComparator(frequencyMap);
         TreeMap<KeyType,Integer> sorted = new TreeMap<>(ramCacheComparator);
         sorted.putAll(frequencyMap);
         return sorted.keySet();
