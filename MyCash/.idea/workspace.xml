@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e2527f0b-eac6-4c98-9300-d7928171cad7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/by/andersen/training/mycache/implementation/RamCacheClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/andersen/training/mycache/implementation/RamCacheClass.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,22 +27,38 @@
         <entry file="file://$PROJECT_DIR$/src/by/andersen/training/mycache/interfaces/IFrecquencyCallObject.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/by/andersen/training/mycache/implementation/RamCacheClass.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1705#1706#0" expanded="true" />
+                <element signature="e#1733#1734#0" expanded="true" />
+                <element signature="e#1900#1901#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/by/andersen/training/mycache/implementation/RamCacheClass.java">
+        <entry file="file://$PROJECT_DIR$/src/by/andersen/training/mycache/implementation/MemoryCacheClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="74" column="30" selection-start-line="74" selection-start-column="30" selection-end-line="74" selection-end-column="30" />
+            <state relative-caret-position="510">
+              <caret line="87" column="12" selection-start-line="87" selection-start-column="12" selection-end-line="87" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1705#1706#0" expanded="true" />
-                <element signature="e#1733#1734#0" expanded="true" />
-                <element signature="e#1885#1886#0" expanded="true" />
-                <element signature="e#2290#2291#0" expanded="true" />
+                <element signature="e#2901#2902#0" expanded="true" />
+                <element signature="e#2994#2995#0" expanded="true" />
+                <element signature="e#3057#3058#0" expanded="true" />
+                <element signature="e#3153#3154#0" expanded="true" />
+                <element signature="e#3251#3252#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -81,6 +98,7 @@
         <option value="$PROJECT_DIR$/src/by/andersen/training/mycache/interfaces/IFrecquencyCallObject.java" />
         <option value="$PROJECT_DIR$/src/by/andersen/training/mycache/comparators/RamCacheComparator.java" />
         <option value="$PROJECT_DIR$/src/by/andersen/training/mycache/implementation/RamCacheClass.java" />
+        <option value="$PROJECT_DIR$/src/by/andersen/training/mycache/implementation/MemoryCacheClass.java" />
       </list>
     </option>
   </component>
@@ -148,6 +166,16 @@
               <item name="andersen" type="462c0819:PsiDirectoryNode" />
               <item name="training" type="462c0819:PsiDirectoryNode" />
               <item name="mycache" type="462c0819:PsiDirectoryNode" />
+              <item name="implementation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MyCash" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MyCash" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="by" type="462c0819:PsiDirectoryNode" />
+              <item name="andersen" type="462c0819:PsiDirectoryNode" />
+              <item name="training" type="462c0819:PsiDirectoryNode" />
+              <item name="mycache" type="462c0819:PsiDirectoryNode" />
               <item name="interfaces" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -159,7 +187,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549008706492" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549009671674" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -190,7 +218,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2710000" />
+    <option name="totallyTimeSpent" value="3100000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -241,7 +269,7 @@
     <entry file="file://$PROJECT_DIR$/src/by/andersen/training/mycache/interfaces/IFrecquencyCallObject.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
@@ -259,14 +287,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/by/andersen/training/mycache/implementation/RamCacheClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="74" column="30" selection-start-line="74" selection-start-column="30" selection-end-line="74" selection-end-column="30" />
+        <state relative-caret-position="187">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1705#1706#0" expanded="true" />
             <element signature="e#1733#1734#0" expanded="true" />
-            <element signature="e#1885#1886#0" expanded="true" />
-            <element signature="e#2290#2291#0" expanded="true" />
+            <element signature="e#1900#1901#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/util/UUID.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="30" column="66" lean-forward="true" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/by/andersen/training/mycache/implementation/MemoryCacheClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="87" column="12" selection-start-line="87" selection-start-column="12" selection-end-line="87" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2901#2902#0" expanded="true" />
+            <element signature="e#2994#2995#0" expanded="true" />
+            <element signature="e#3057#3058#0" expanded="true" />
+            <element signature="e#3153#3154#0" expanded="true" />
+            <element signature="e#3251#3252#0" expanded="true" />
           </folding>
         </state>
       </provider>

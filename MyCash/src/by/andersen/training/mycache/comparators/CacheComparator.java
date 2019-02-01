@@ -3,11 +3,11 @@ package by.andersen.training.mycache.comparators;
 import java.util.Comparator;
 import java.util.Map;
 
-public class RamCacheComparator implements Comparator {
+public class CacheComparator implements Comparator {
 
     Map base;
 
-    public RamCacheComparator(Map base) {
+    public CacheComparator(Map base) {
         this.base = base;
     }
 
