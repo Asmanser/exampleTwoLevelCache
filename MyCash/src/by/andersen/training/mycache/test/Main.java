@@ -11,13 +11,14 @@ public class Main {
         Book book2 = new Book("Александр Полярный","Мятная сказка");
         Book book3 = new Book("Эльчин Сафарли","Когда я вернусь, будь дома");
         Book book4 = new Book("Том Хэнкс","Уникальный экземпляр. Истории о том о сём");
-        TwoLevelCacheClass<String,Book> twoLevelCacheClass = new TwoLevelCacheClass<String, Book>(2,1);
+        TwoLevelCacheClass<String,Book> twoLevelCacheClass = new TwoLevelCacheClass<String, Book>(2,1,2);
         twoLevelCacheClass.cache(book1.getName(),book1);
         twoLevelCacheClass.cache(book2.getName(),book2);
-        Book book = twoLevelCacheClass.getObject(book2.getName());
-        book = twoLevelCacheClass.getObject(book2.getName());
+        Book book = twoLevelCacheClass.getObject(book1.getName());
+        book = twoLevelCacheClass.getObject(book1.getName());
         twoLevelCacheClass.cache(book3.getName(),book3);
         twoLevelCacheClass.cache(book4.getName(),book4);
+        book = twoLevelCacheClass.getObject(book1.getName());
         book = twoLevelCacheClass.getObject(book1.getName());
         System.out.println(book);
         twoLevelCacheClass.clearCache();

@@ -4,6 +4,7 @@ import by.andersen.training.mycache.interfaces.ILeveledCache;
 
 import java.io.IOException;
 import java.io.Serializable;
+import java.util.Iterator;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -12,11 +13,13 @@ public class TwoLevelCacheClass<KeyType,ValueType extends Serializable> implemen
     private RamCacheClass<KeyType,ValueType> ramCache;
     private MemoryCacheClass<KeyType,ValueType> memoryCache;
     private int maxRamCacheCapacity;
+    private int maxMemoryCacheCapacity;
     private int numberOfRequests;
     private int numberOfRequestsForRecahce;
 
-    public TwoLevelCacheClass(int maxRamCacheCapacity, int numberOfRequestsForRecache)
+    public TwoLevelCacheClass(int maxRamCacheCapacity, int numberOfRequestsForRecache,int maxMemoryCacheCapacity)
     {
+        this.maxMemoryCacheCapacity = maxMemoryCacheCapacity;
         this.maxRamCacheCapacity = maxRamCacheCapacity;
         this.numberOfRequestsForRecahce = numberOfRequestsForRecache;
         ramCache = new RamCacheClass<KeyType, ValueType>();
@@ -38,6 +41,7 @@ public class TwoLevelCacheClass<KeyType,ValueType extends Serializable> implemen
         }
         boundFrecquency /= ramKeySet.size();
 
+        freeSpaceInMemoryCache(ramKeySet,boundFrecquency);
 
         for(KeyType key: ramKeySet)
         {
@@ -68,12 +72,41 @@ public class TwoLevelCacheClass<KeyType,ValueType extends Serializable> implemen
         }
     }
 
+    private void freeSpaceInMemoryCache(TreeSet<KeyType> ramKeySet,int boundFrecquency) throws IOException, ClassNotFoundException {
+        int countElement = 0;
+        for(KeyType key: ramKeySet)
+        {
+            if(ramCache.getFrecquencyOfCallingObject(key) <= boundFrecquency){
+                countElement++;
+            }
+        }
+        if(countElement > (maxMemoryCacheCapacity-memoryCache.size())) {
+            if(memoryCache.size() >= maxMemoryCacheCapacity) {
+                Iterator<KeyType> iterator = memoryCache.getMostFrequentlyUsedKeys().iterator();
+                KeyType keyType = null;
+                int i = 1;
+                while(iterator.hasNext()) {
+                    keyType = iterator.next();
+                    if(keyType != null) {
+                        memoryCache.removeObject(keyType);
+                    }
+                    if(i != (countElement - maxMemoryCacheCapacity-memoryCache.size())) {
+                        i++;
+                    } else {
+                        break;
+                    }
+                }
+            }
+        }
+    }
+
     @Override
     public void cache(KeyType keyType, ValueType valueType) throws IOException, ClassNotFoundException {
         if(!(ramCache.size() >= maxRamCacheCapacity)) {
             ramCache.cache(keyType, valueType);
         } else {
             recache();
+            ramCache.cache(keyType, valueType);
         }
     }
 
