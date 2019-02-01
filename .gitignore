@@ -19,6 +19,7 @@ MyCash/.idea/**/sqlDataSources.xml
 MyCash/.idea/**/dynamic.xml
 MyCash/.idea/**/uiDesigner.xml
 MyCash/.idea/**/dbnavigator.xml
+MyCash/.idea/**/workspace.xml
 
 # Gradle
 MyCash/.idea/**/gradle.xml
